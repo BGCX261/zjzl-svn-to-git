@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="zjzl.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CounterName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C1</Value>
+    </Setting>
+    <Setting Name="DbConn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">kiZDo9kGmI9di1S5hbPkdzbH9FM6Alg4hLeAYBNB83M=</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

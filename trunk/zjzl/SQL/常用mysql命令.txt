@@ -1,0 +1,28 @@
+<>执行sql脚本
+source [sql脚本路径]
+如：mysql> source E:\work\zjzl\SQL\create_table.sql
+
+<>创建用户
+grant select,insert,update,delete on *.* to test1@"%" Identified by "abc"
+如：grant select,insert,update,delete on zjzl.* to zjzl@"%" Identified by "123"
+
+<>mysql5忘记密码后的处理方法 
+    停止mysql5服务：在DOS窗口下输入net stop mysql5，mysql5是MySql数据库的服务名，如果您的MySql服务名不是MySql5，请注意修改；
+    开一个DOS窗口，执行MySql安装目录下bin目录的mysqld-nt.exe，命令：mysqld-nt --skip-grant-tables，一定要先执行到MySql安装目录下bin目录再执行该语句，否则会提示'mysql-nt' 不是内部或外部命令，也不是可运行的程序或批处理文件；
+    再开一个DOS窗口，执行MySql安装目录下bin目录的mysqld.exe，命令：mysqld，同样一定要先执行到MySql安装目录下bin目录再执行该语句，否则会提示'mysqld' 不是内部或外部命令，也不是可运行的程序或批处理文件，这样就进入了mysql>提示符,然后打开mysql数据库修改user中用户root的密码；
+    输入：use mysql
+    update user set password=password("new_pass") where user="root";
+    flush PRivileges;
+    exit
+    使用任务管理器，找到mysqld-nt的进程，结束进程 
+    重新启动mysql服务,就可以用新密码登录了
+
+<>备份与恢复
+导出:
+  mysqldump   -u   root   -p   dbname   >   d:\a.sql
+    
+导入:
+  mysql   -u   root   -p   dbname   <   d:\a.sql
+
+
+
